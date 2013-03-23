@@ -285,4 +285,3 @@ void ChemicalData::sortRiskfactor(Chemical chemArray[], int size)
         cout<<chemArray[k].toString()<<endl;
 }
 
-
