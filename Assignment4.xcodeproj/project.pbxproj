@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C96D76D216F9257600E5285D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C96D76D116F9257600E5285D /* main.cpp */; };
+		C96D76D216F9257600E5285D /* driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C96D76D116F9257600E5285D /* driver.cpp */; };
 		C96D76D416F9257600E5285D /* Assignment4.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C96D76D316F9257600E5285D /* Assignment4.1 */; };
+		C96D76DB16F926F000E5285D /* ChemicalData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C96D76DA16F926F000E5285D /* ChemicalData.cpp */; };
+		C96D76DE16F92A2500E5285D /* Chemical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C96D76DD16F92A2500E5285D /* Chemical.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,14 @@
 
 /* Begin PBXFileReference section */
 		C96D76CE16F9257600E5285D /* Assignment4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment4; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96D76D116F9257600E5285D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C96D76D116F9257600E5285D /* driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = driver.cpp; sourceTree = "<group>"; };
 		C96D76D316F9257600E5285D /* Assignment4.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Assignment4.1; sourceTree = "<group>"; };
+		C96D76DA16F926F000E5285D /* ChemicalData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChemicalData.cpp; sourceTree = "<group>"; };
+		C96D76DC16F9275C00E5285D /* Chemical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chemical.h; sourceTree = "<group>"; };
+		C96D76DD16F92A2500E5285D /* Chemical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chemical.cpp; sourceTree = "<group>"; };
+		C96D76E016F92D9E00E5285D /* toxins.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toxins.csv; sourceTree = "<group>"; };
+		C96D76E116F9487800E5285D /* ChemicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChemicalData.h; sourceTree = "<group>"; };
+		C9F05D0A16FD619D00B91357 /* toxins1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toxins1.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,13 @@
 		C96D76D016F9257600E5285D /* Assignment4 */ = {
 			isa = PBXGroup;
 			children = (
-				C96D76D116F9257600E5285D /* main.cpp */,
+				C96D76E016F92D9E00E5285D /* toxins.csv */,
+				C9F05D0A16FD619D00B91357 /* toxins1.csv */,
+				C96D76D116F9257600E5285D /* driver.cpp */,
+				C96D76E116F9487800E5285D /* ChemicalData.h */,
+				C96D76DA16F926F000E5285D /* ChemicalData.cpp */,
+				C96D76DC16F9275C00E5285D /* Chemical.h */,
+				C96D76DD16F92A2500E5285D /* Chemical.cpp */,
 				C96D76D316F9257600E5285D /* Assignment4.1 */,
 			);
 			path = Assignment4;
@@ -117,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96D76D216F9257600E5285D /* main.cpp in Sources */,
+				C96D76D216F9257600E5285D /* driver.cpp in Sources */,
+				C96D76DB16F926F000E5285D /* ChemicalData.cpp in Sources */,
+				C96D76DE16F92A2500E5285D /* Chemical.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +232,7 @@
 				C96D76D916F9257600E5285D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
