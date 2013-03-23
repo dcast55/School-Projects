@@ -91,3 +91,10 @@ string Chemical::getRiskfactor()
 {
     return riskfactor;
 }
+
+string Chemical::toString()
+{
+    string s1;
+    s1 = name + "," + number + "," + cleanair + "," + classification + "," + metal + "," + metalcategory + "," + carcinogen + "," + formtype + "," + unitmeasure + "," + riskfactor;
+    return s1;
+}

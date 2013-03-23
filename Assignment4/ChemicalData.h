@@ -18,6 +18,7 @@ private:
 
 public:
     int inputdata(Chemical[]);
+    void outputFile(Chemical[], int);
     void sortName(Chemical[], int);
     void sortNum(Chemical[], int);
     void sortCleanAir(Chemical[], int);
@@ -30,5 +31,6 @@ public:
     void sortRiskfactor(Chemical[], int);
     
 };
+
 
 

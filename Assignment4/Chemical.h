@@ -38,6 +38,7 @@ public:
     string getFormtype();
     string getUnitmeasure();
     string getRiskfactor();
+    string toString();
 };
 
 

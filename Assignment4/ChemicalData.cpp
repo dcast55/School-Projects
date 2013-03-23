@@ -74,6 +74,37 @@ int ChemicalData::inputdata(Chemical chemArray[])
     return size;
 }
 
+void ChemicalData::outputFile(Chemical chemArray[], int size)
+{
+    ofstream outFile;
+    string fileNameOut;
+    bool worked = false;
+    
+    do
+    {
+		cout << "Enter name of file to output to:" << endl;
+		cin >> fileNameOut;
+		
+		outFile.open (fileNameOut.c_str());
+        
+        if (outFile.fail())
+        {
+            cerr << "There was an error opening the file. Check the file and try again." << endl;
+			outFile.clear();
+			worked = false;
+		}
+		else
+			worked = true;
+	} while (!worked);
+    
+    outFile<<"Chemical,CAS #/Comp ID,Clean Air Act Chemical,Classification,Metal,Metal Category,Carcinogen,Form Type,Unit of Measure,Risk Factor"<<endl;
+    for (int i=0; i<size; i++)
+        outFile<<chemArray[i].toString()<<endl;
+    
+    outFile.close();
+    cout<<"Output complete. Exiting program..."<<endl<<endl;
+}
+
 void ChemicalData::sortName(Chemical chemArray[], int size)
 {
     int i, j;
@@ -88,9 +119,8 @@ void ChemicalData::sortName(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getName()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortNum(Chemical chemArray[], int size)
@@ -107,9 +137,8 @@ void ChemicalData::sortNum(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getNum()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortCleanAir(Chemical chemArray[], int size)
@@ -126,9 +155,8 @@ void ChemicalData::sortCleanAir(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getCleanair()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortClassification(Chemical chemArray[], int size)
@@ -145,9 +173,8 @@ void ChemicalData::sortClassification(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getClassification()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortMetal(Chemical chemArray[], int size)
@@ -164,9 +191,8 @@ void ChemicalData::sortMetal(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getMetal()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortMetalcategory(Chemical chemArray[], int size)
@@ -183,9 +209,8 @@ void ChemicalData::sortMetalcategory(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getMetalcategory()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortCarcinogen(Chemical chemArray[], int size)
@@ -202,9 +227,8 @@ void ChemicalData::sortCarcinogen(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getCarcinogen()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortFormtype(Chemical chemArray[], int size)
@@ -221,9 +245,8 @@ void ChemicalData::sortFormtype(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getFormtype()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortUnitmeasure(Chemical chemArray[], int size)
@@ -240,9 +263,8 @@ void ChemicalData::sortUnitmeasure(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getUnitmeasure()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
 
 void ChemicalData::sortRiskfactor(Chemical chemArray[], int size)
@@ -259,7 +281,8 @@ void ChemicalData::sortRiskfactor(Chemical chemArray[], int size)
         chemArray[i+1] = tempchem[0];
     }
     
-    
     for (int k=0; k<size; k++)
-        cout<<chemArray[k].getRiskfactor()<<endl;
+        cout<<chemArray[k].toString()<<endl;
 }
+
+
